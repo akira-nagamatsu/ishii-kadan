@@ -1,0 +1,23 @@
+$small-pc: 1440px;
+$tab: 1024px;
+$sp: 767px;
+
+@mixin s-pc {
+  @media (max-width: ($small-pc)) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+

@@ -1,0 +1,45 @@
+@use './../base/mediaquery' as md;
+
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: .3s;
+    &__inner {
+        padding-right: 20px;
+        padding-left: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 80px;
+        @include md.sp {
+            padding-right: 55px;
+            height: 60px;
+        }
+    }
+    &__inner-left {
+        display: flex;
+        align-items: center;
+    }
+    &__nav  {
+        margin-left: 120px;
+        @include md.sp {
+            display: none;
+        }
+        a {
+            font-weight: 800;
+        }
+    }
+    &.white, &--white {
+        color: #000;
+        background-color: #fff;
+        .site-title__text {
+            color: #000;
+        }
+        .horizontal-nav a {
+            color: #000;
+        }
+    }
+}

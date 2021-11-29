@@ -1,0 +1,18 @@
+.horizontal-nav {
+    display: flex;
+    align-items: flex-start;
+    &__item {
+        margin-right: 33px;
+        transition: .3s;
+        &:hover,
+        &:focus {
+            opacity: .7;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+        a {
+            color: #fff;
+        }
+    }
+}

@@ -1,0 +1,59 @@
+@use './../base/mediaquery' as md;
+
+.footer {
+    text-align: center;
+    &__inner {
+        padding: 61px 20px 59px;
+        background-image: url(./../images/bg03.png);
+        background-size: cover;
+        background-position: center;
+        @include md.sp {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        };
+    }
+    &__verticle-link {
+        margin-bottom: 93px;
+        justify-content: center;
+        @include md.sp {
+            margin-bottom: 30px;
+        };
+    }
+    &__site-title {
+        display: block;
+        margin-bottom: 65px;
+        color: #000;
+        @include md.sp {
+            margin-bottom: 35px;
+        };
+        .site-title__logo-wrapper {
+            margin-right: 0;
+            margin-bottom: 13px;
+        }
+        .site-title__logo {
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+    .inline-block-wrapper:nth-of-type(1) {
+        margin-bottom: 18px;
+        .inline-block:first-child{
+            margin-right: 16px;
+        }
+        .inline-block:last-child{
+            letter-spacing: 0.18em;
+        }
+    }
+    .inline-block-wrapper:nth-of-type(2) .inline-block:first-child{
+        margin-right: 21px;
+    }
+    &__bottom {
+        padding: 21px 20px 23px;
+        background-color: #000;
+        color: #fff;
+        @include md.sp {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        };
+    }
+}

@@ -1,0 +1,20 @@
+@use './../base/mediaquery' as md;
+
+.map {
+    position: relative;
+    width: 67.119%;
+    padding-top: 592px;
+    margin-right: auto;
+    margin-left: auto;
+    @include md.sp {
+        width: 100%;
+        padding-top: 400px;
+    };
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}

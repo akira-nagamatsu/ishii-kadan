@@ -1,0 +1,39 @@
+@use './../base/mediaquery' as md;
+
+.access {
+    padding-top: 60px;
+    padding-bottom: 110px;
+    background-image: url(./../images/bg.png);
+    background-size: cover;
+    background-position: center;
+    @include md.sp {
+        padding-bottom: 60px;
+    };
+    &__section-title {
+        margin-bottom: 79px;
+        @include md.sp {
+            margin-bottom: 60px;
+        };
+    }
+    &__half-media {
+        align-items: center;
+        margin-bottom: 69px;
+        @include md.sp {
+            margin-bottom: 30px;
+        };
+        .half-media__img {
+            flex-basis: 55.593%;
+            img {
+                height: 370px;
+                width: 100%;
+                object-fit: cover;
+                @include md.sp {
+                    height: 400px;
+                };
+            }
+        }
+        .half-media__body {
+            padding-top: 0;
+        }
+    }
+}

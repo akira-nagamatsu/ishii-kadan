@@ -1,0 +1,24 @@
+@use './../base/mediaquery' as md;
+
+.about {
+    background-image: url(./../images/bg.png);
+    background-size: cover;
+    background-size: center;
+    &__heading {
+        font-size: 2.8rem;
+    }
+    &__content {
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 144px 101px 96px 0;
+        @include md.s-pc {
+            justify-content: center;
+            padding: 50px 0;
+            margin-right: auto;
+            margin-left: auto;
+        };
+        @include md.sp {
+            display: block;
+        };
+    }
+}

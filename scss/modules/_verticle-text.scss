@@ -1,0 +1,64 @@
+@use './../base/mediaquery' as md;
+
+.verticle-text {
+    min-width: 24px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    margin-left: 22px;
+    letter-spacing: 6px;
+    @include md.s-pc {
+        margin-left: 11px;
+    };
+    @include md.sp {
+        writing-mode: horizontal-tb;
+        margin-left: 0;
+        padding-left: 30px;
+        letter-spacing: 0.1em;
+    };
+    &:last-child {
+        margin-left: 0;
+    }
+    &--large {
+        margin-left: 33px;
+        letter-spacing: 14px;
+        @include md.s-pc {
+            margin-left: 22px;
+        };
+        @include md.sp {
+            margin-left: 0;
+            padding-left: 0;
+            letter-spacing: 0.1em;
+        };
+    }
+    &--up {
+        position: relative;
+        top: -85px;
+        @include md.s-pc {
+            top: 0;
+        };
+    }
+    &--bottom {
+        text-align: end;
+        text-indent: 1em;
+        @include md.sp {
+            font-size: 2rem;
+            margin-top: 40px;
+        };
+    }
+    &-wrapper {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-left: 10%;
+        @include md.s-pc {
+            margin-left: 8%;
+        };
+        @include md.sp {
+            display: block;
+            margin-left: 0;
+            margin-bottom: 10px;
+            &:first-child {
+                margin-bottom: 30px;
+            }
+        };
+    }
+}

@@ -1,0 +1,26 @@
+.form {
+    &__label {
+        display: block;
+        margin-bottom: 12px;
+        font-weight: 500;
+        line-height: 1.3125;
+    }
+    &__input {
+        width: 100%;
+        margin-bottom: 11px;
+        padding: 6px 10px 7px;
+        border: 1px solid #E7E7E7;
+        font-size: 1.4rem;
+        line-height: 1.3571;
+    }
+    &__btn {
+        margin-top: 53px;
+        padding-top: 9px;
+        padding-bottom: 10px;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        -webkit-appearance: none;
+	    border-radius: 0;
+    }
+}

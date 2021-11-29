@@ -1,0 +1,34 @@
+.tab {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 47px;
+    &__item {
+        margin-right: 53px;
+        transition: .3s;
+        
+        &:last-child {
+            margin-right: 0;
+        }
+        &.active {
+            border-bottom: 1px solid #707070;
+            button {
+                cursor: auto;
+            }
+        }
+        &:hover {
+            border-bottom: 1px solid #707070;
+        }
+        button {
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+    }
+    &__area ul {
+        display: none;
+        &.show {
+            display: block;
+        }
+    }
+}

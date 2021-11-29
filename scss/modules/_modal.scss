@@ -1,0 +1,69 @@
+@use './../base/mediaquery' as md;
+
+.modal {
+    display: none;
+    &.is-open {
+        display: block;
+    }
+    &__overlay {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255,255,255,.6);
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 100;
+    }
+    &__wrapper {
+        padding: 25px 60px 90px;
+        width: 80%;
+        height: 80vh;
+        max-height: 600px;
+        max-width: 550px;
+        overflow-y: auto;
+        border: 1px solid #707070;
+        background-color: #fff;
+        position: relative;
+        @include md.sp {
+            padding-right: 30px;
+            padding-left: 30px;
+        };
+    }
+    &__btn {
+        padding: 0;
+        border: none;
+        background-color: #fff;
+        position: absolute;
+        top: 20px;
+        right: 22px;
+        width: 18px;
+        height: 18px;
+        cursor: pointer;
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            width: 25.4px;
+            height: 1px;
+            background-color: #000;
+            position: absolute;
+        }
+        &::before {
+            transform: translateX(-3.7px) rotate(45deg);
+        }
+        &::after {
+            transform: translateX(-3.7px) rotate(-45deg);
+        }
+    }
+    &__title {
+        padding-bottom: 26.5px;
+        margin-bottom: 32.5px;
+        border-bottom: 1px solid #E7E7E7;
+        font-size: 2rem;
+        line-height: 1.35;
+        text-align: center;
+    }
+}

@@ -1,0 +1,15 @@
+@use './../base/mediaquery' as md;
+
+.plans {
+    padding-top: 60px;
+    padding-bottom: 142px;
+    background-image: url(./../images/bg02.png);
+    background-size: cover;
+    background-position: center;
+    @include md.sp {
+        padding-bottom: 60px;
+    };
+    &__section-title {
+        margin-bottom: 61px;
+    }
+}

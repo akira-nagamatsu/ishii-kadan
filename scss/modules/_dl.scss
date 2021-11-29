@@ -1,0 +1,18 @@
+@use './../base/mediaquery' as md;
+
+.dl {
+    &__head {
+        margin-bottom: 19px;
+        line-height: 1.3125;
+        @include md.sp {
+            margin-bottom: 10px;
+        };
+    }
+    &__description {
+        margin-bottom: 19px;
+        line-height: 2;
+        @include md.sp {
+            line-height: 1.2;
+        };
+    }
+}

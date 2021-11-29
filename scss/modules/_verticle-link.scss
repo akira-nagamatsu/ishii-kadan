@@ -1,0 +1,23 @@
+.verticle-link {
+    display: flex;
+    flex-direction: row-reverse;
+    &__item {
+        width: 27px;
+        margin-left: 34px;
+        &:last-child {
+            margin-left: 0;
+        }
+        a {
+            writing-mode: vertical-rl;
+            font-size: 1.8rem;
+            color: #000;
+            letter-spacing: 14px;
+            text-align: start;
+            transition: .3s;
+            &:focus,
+            &:hover {
+                opacity: .7;
+            }
+        }
+    }
+}

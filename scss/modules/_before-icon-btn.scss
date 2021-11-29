@@ -1,0 +1,40 @@
+@use './../base/mediaquery' as md;
+
+.before-icon-btn {
+    display: inline-block;
+    padding: 16px 10px;
+    width: 170px;
+    color: #fff;
+    font-weight: 800;
+    background-color: #978F10;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    transition: .3s;
+    @include md.sp {
+        width: 100px;
+        padding: 8px;
+        font-size: 1.4rem;
+    };
+    &:focus,
+    &:hover {
+        opacity: .7;
+    }
+    &::before {
+        display: inline-block;
+        margin-right: 10px;
+        background-size: contain;
+        vertical-align: top;
+    }
+    &--calendar::before {
+        content: '';
+        width: 22px;
+        height: 22px;
+        background-image: url(../images/calendar.png);
+        @include md.sp {
+            width: 12px;
+            height: 12px;
+            vertical-align: text-top;
+        };
+    }
+}

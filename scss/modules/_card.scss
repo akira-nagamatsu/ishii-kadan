@@ -1,0 +1,56 @@
+@use './../base/mediaquery' as md;
+
+.card {
+    position: relative;
+    &__img-wrapper {
+        position: relative;
+        padding-top: 63.142%;
+        overflow: hidden;
+    }
+    &__img {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        transform: translateY(-50%);
+    }
+    &__body {
+        padding-top: 28px;
+        > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__title {
+        margin-bottom: 30px;
+        font-size: 2rem;
+        line-height: 1.6;
+    }
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    @include md.sp {
+        display: block;
+        .card {
+            margin-bottom: 60px;
+            max-width: 500px;
+            margin-right: auto;
+            margin-left: auto;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &__title {
+                margin-bottom: 10px;
+            }
+        }
+    };
+    &--col3 > &__item {
+        width: 28.051%;
+        @include md.s-pc {
+            width: 30%;
+        };
+        @include md.sp {
+            width: 100%;
+        };
+    }
+}

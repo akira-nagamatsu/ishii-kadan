@@ -1,0 +1,19 @@
+@use './../base/mediaquery' as md;
+
+.container {
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1220px;
+    &--main {
+        padding-top: 33px;
+    }
+    @include md.sp {
+        &--md-fullsize {
+            width: 100%;
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+}
